@@ -61,6 +61,7 @@ The schema follows the **star model**, optimized for fast analytical queries.
 ---
 
 ## ETL Pipeline
+
 The pipeline consists of three stages:
 
 - **Extract**
@@ -71,6 +72,8 @@ Clean and prepare data: handling nulls, fixing types, standardizing formats
 
 - **Load**
 Insert cleaned data into silver and finally into gold star schema tables
+
+> **Verification:** After running each ETL stage, execute simple row-count queries on the Bronze, Silver, and Gold tables to confirm that data has been loaded successfully before continuing to the next stage.
 
 Scripts are modularized into:
 
